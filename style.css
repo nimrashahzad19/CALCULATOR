@@ -1,0 +1,84 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --btn: #e0e0e0;
+  --btn-hover: #d0d0d0;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #ffffff;
+  --btn: #333333;
+  --btn-hover: #444444;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.calculator {
+  width: 320px;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background: var(--btn);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--btn-hover);
+}
+
+.history {
+  margin-top: 20px;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.history li {
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+  padding: 4px 0;
+}
